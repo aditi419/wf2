@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Make Your Own Project - 1</title>
+
+        <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+  
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+        <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+        <script src="JS\text.js"></script>
+    </head>
+
+    <body>
+        <a-scene id="scene">
+           <!--A-FRAME Environment-->
+           <a-entity id="environment" environment="preset: poison; skyType: gradient; lighting: point;"></a-entity>
+       
+           <a-entity id="look" look-controls camera position="0 1 0">
+            <!--Welcome Text-->
+            <a-entity id="welcomeText-entity" text="font: exo2bold; align: center; width: 5; color: white; value: Welcome Player!" position="0 1 -2"></a-entity>  
+            
+            <!--Introduction Text-->
+            <a-entity id="introText-entity" text="font: exo2bold; align: center; width: 3; color: white; value: You have been trapped in my evil lair..but..I'll set you free if you can beat my riddles! Are you ready?" position="0 0.5 -2"></a-entity>
+        
+            <!--Play Button-->
+            <img id="btnImg" src="playbtn.png">
+            <a-image id="playButton" src="#btnImg" position="0 -0.3 -2" height="0.8" width="1"></a-image>
+        </a-scene>
+    </body>
+</html>
